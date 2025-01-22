@@ -13,7 +13,7 @@ function checkAnswer(event) {
 
     // Check the answer
     if (userAnswer === correctAnswer) {
-        window.location.href = 'nextpage.html';
+        window.location.href = 'pac.html';
     } else {
         feedback.style.display = 'block';
         feedback.textContent = 'Incorrect answer. Try again!';
