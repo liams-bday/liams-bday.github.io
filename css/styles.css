@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: hsl(154 50% 5%);
+    color: hsl(154 84% 70%);
+    text-shadow: 0 0 4px hsl(154 84% 70%);
+    font-family: monospace;
+    font-size: 16px;
+}
+
+header {
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    display: inline;
+}
+
+h1.blink {
+    animation: blink 0.4s linear infinite;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #2f2f2f;
+    border-radius: 8px;
+    box-shadow: 0 0 8px hsl(154 84% 70%);
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid hsl(154 84% 70%);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #2f2f2f;
+    color: hsl(154 84% 70%);
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: hsl(154 84% 70%);
+}
+
+button {
+    background-color: hsl(154 84% 70%);
+    color: #2f2f2f;
+    text-shadow: 0 0 4px hsl(154 84% 70%);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#feedback {
+    font-size: 1rem;
+    color: red;
+    margin-top: 10px;
+}
+
+/* Blink animation */
+@keyframes blink {
+    0% { opacity: 0; }
+    30% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Interlaced scanlines */
+#interlaced {
+    position: fixed;
+    background: repeating-linear-gradient(
+        transparent 0px 1px,
+        hsl(154, 0%, 0%, 0.3) 3px 4px
+    );
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: lines 0.06666666s linear infinite;
+}
+
+@keyframes lines {
+    0% { background-position: 0px 0px; }
+    50% { background-position: 0px 0px; }
+    51% { background-position: 0px 2px; }
+    100% { background-position: 0px 2px; }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}

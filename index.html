@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam's B-Day Hunt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="blink">&gt;</h1>
+        <h1> Liam's Birthday Hunt!</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>1st Riddle</h2>
+            <p>I follow you all the time and copy your every move, but you can’t touch me or catch me. What am I?</p>
+            <form onsubmit="checkAnswer(event)">
+                <input type="text" id="answer" placeholder="Enter your answer" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="interlaced"></div>  
+    <div id="glare"></div>
+</body>
+</html>
