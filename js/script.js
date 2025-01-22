@@ -1,21 +1,9 @@
-function checkAnswer(event) {
+function checkAnswer(event, correctAnswer, nextPage) {
     event.preventDefault();
     const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
-    const correctAnswer = 'shadow';
-    const feedback = document.getElementById('feedback');
 
-    // Clear any existing feedback
-    if (!feedback) {
-        const newFeedback = document.createElement('p');
-        newFeedback.id = 'feedback';
-        document.querySelector('.card').appendChild(newFeedback);
-    }
-
-    // Check the answer
+    // Check if the answer is correct
     if (userAnswer === correctAnswer) {
-        window.location.href = 'pac.html';
-    } else {
-        feedback.style.display = 'block';
-        feedback.textContent = 'Incorrect answer. Try again!';
+        window.location.href = nextPage;  // Redirect to the next riddle page
     }
 }

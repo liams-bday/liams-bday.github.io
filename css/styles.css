@@ -64,11 +64,13 @@ input {
     font-size: 1rem;
     background-color: #2f2f2f;
     color: hsl(154 84% 70%);
+    text-shadow: 0 0 4px hsl(154 84% 70%);
     box-sizing: border-box;
 }
 
 input::placeholder {
     color: hsl(154 84% 70%);
+    text-shadow: 0 0 4px hsl(154 84% 70%);
 }
 
 button {
@@ -82,6 +84,12 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    background-color: transparent;
+    align-items: center;
     box-sizing: border-box;
 }
 
@@ -143,5 +151,9 @@ button:hover {
     button {
         font-size: 0.9rem;
         padding: 8px 16px;
+    }
+
+    input, button {
+        width: 90%;
     }
 }
