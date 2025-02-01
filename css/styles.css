@@ -25,6 +25,7 @@ h1.blink {
     animation: blink 0.4s linear infinite;
 }
 
+
 .container {
     display: flex;
     flex-direction: column;
@@ -60,6 +61,10 @@ h2 {
 p {
     font-size: 1rem;
     margin-bottom: 24px;
+}
+
+p.blink {
+    animation: blink 0.4s linear infinite;
 }
 
 input {
