@@ -8,20 +8,23 @@ the clues where the heart is, or used to be
 but maybe don't bother the group of newbies
 all I am saying (this point, I belabor)
 sometimes it's nice to get help from a neighbor!`;
+    const cursorEffect = '<span class="cursor">></span>'; 
 
     let typingTimeout;
     let i = 0;
 
     function typeWriterEffect(text, element, speed) {
         clearTimeout(typingTimeout);
-        element.textContent = ""; 
+        element.innerHTML = ""; 
         i = 0;
         
         function type() {
             if (i < text.length) {
-                element.textContent += text[i]; 
+                element.innerHTML = text.substring(0, i + 1) + cursorEffect; 
                 i++;
                 typingTimeout = setTimeout(type, speed);
+            } else {
+                element.innerHTML = text + cursorEffect;
             }
         }
 
@@ -33,7 +36,7 @@ sometimes it's nice to get help from a neighbor!`;
 
         video.play().catch(() => {
             replayButton.textContent = "Play";
-            riddleText.textContent = "";
+            riddleText.innerHTML = "";
         });
 
         video.addEventListener("play", function () {
