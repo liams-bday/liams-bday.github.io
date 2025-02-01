@@ -40,7 +40,7 @@ sometimes it's nice to get help from a neighbor!`;
         });
 
         video.addEventListener("play", function () {
-            typeWriterEffect(riddleContent, riddleText, 50);
+            typeWriterEffect(riddleContent, riddleText, 80);
         });
 
         video.addEventListener("ended", function () {
@@ -51,7 +51,7 @@ sometimes it's nice to get help from a neighbor!`;
             video.currentTime = 0;
             video.play();
             replayButton.textContent = "Play Again?";
-            typeWriterEffect(riddleContent, riddleText, 50);
+            typeWriterEffect(riddleContent, riddleText, 80);
         });
     }
 });
