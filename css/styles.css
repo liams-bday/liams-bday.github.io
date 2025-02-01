@@ -103,6 +103,10 @@ button {
     box-sizing: border-box;
 }
 
+#written_riddle {
+    white-space: pre-line;
+}
+
 #replay {
     width: 90%;
     margin-top: 20px;

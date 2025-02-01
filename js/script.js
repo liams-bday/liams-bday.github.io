@@ -23,21 +23,24 @@ document.addEventListener("DOMContentLoaded", function () {
         element.innerHTML = ""; 
         i = 0;
     
-        // Convert newlines to <br> for HTML rendering
-        const formattedText = text.replace(/\n/g, "<br>");
+        const formattedText = text.split("\n").join("<br>"); 
+        const charArray = [...formattedText];
     
         function type() {
-            if (i < formattedText.length) {
-                element.innerHTML = formattedText.substring(0, i + 1) + cursorEffect; 
+            if (i < charArray.length) {
+                requestAnimationFrame(() => {
+                    element.innerHTML = charArray.slice(0, i + 1).join('') + cursorEffect;
+                });
                 i++;
                 typingTimeout = setTimeout(type, speed);
             } else {
                 element.innerHTML = formattedText + cursorEffect;
             }
         }
+        
     
         type();
-    }
+    }    
     
 
     if (video && replayButton) {
